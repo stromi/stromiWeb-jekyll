@@ -1,16 +1,96 @@
 .cv-content {
-	padding: 3rem 0;
+    padding: 3rem 2rem;
+    background: $color-bg-light;
+    z-index: 1;
+    &:before {
+        width: 2px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate3d(-50%, 0, 0);
+        content: '';
+        display: block;
+        z-index: -1;
+        background: rgba($color-bg-dark, 0.1);
+    }
+   
 }
 
 .milestone {
-	@include flex-center(center,center);
-	margin: 6rem 0;
-	h2 {
-		text-align: right;
-	}
-	span {
-		text-align: right;
-		float: left;
-		width: 100%;
-	}
+    z-index: 1;
+    margin: 6rem 0;
+    float: left;
+    width: 100%;
+    .data-block {
+        padding: 4rem 2rem 2rem 6rem;
+    }
+    .title {
+        margin-right: -6rem;
+        margin-top: -3rem;
+        z-index: 2;
+        position: relative;
+        h2 {
+            text-align: right;
+            color: $color-text-light;
+            padding: 2rem;
+            background: $color-bg-dark;
+            display: block;
+            width: 100%;
+            @include box-shadow-light(0.2);
+            float: left;
+        }
+        span {
+            text-align: right;
+            float: right;
+            width: auto;
+            display: block;
+            padding: 0.5rem 1rem 2rem 1rem;
+            background: #866bb7;
+            font-size: 1.5rem;
+            color: #fff;
+            margin: 0 -1rem -1.5rem 0;
+            @include box-shadow-light(0.3);
+            @include media-breakpoint-down(md) {
+        margin: 0 -2rem -1.5rem 0;
+    }
+        }
+    }
+    
+    @include media-breakpoint-down(sm) {
+        display: block;
+        .title {
+            margin: 0;
+            float: left;
+            width: 100%;
+            h2 {
+                text-align: left;
+                z-index: 1;
+                float: left;
+                width: auto;
+                display: block;
+                padding: 1rem;
+                font-size: 1.4rem;
+            }
+            span {
+                
+                margin: 0 0 -1.5rem 2rem;
+                z-index: -1;
+                
+                position: absolute;
+                top: -3rem;
+                left: -4rem;
+                width: auto;
+            }
+        }
+        .description {
+            float: left;
+            width: 100%;
+            margin: -3rem 0 0 1rem;
+            display: block;
+            .data-block {
+                padding: 4rem 2rem 2rem 2rem;
+            }
+        }
+    }
 }

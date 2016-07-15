@@ -1,8 +1,6 @@
-milestone1:
-    name: Robert Rawlins
-    email: robert@sorryapp.com
-    web: http://twitter.com/sirrawlins
-milestone2:
-    name: Robin Geall
-    email: robin@sorryapp.com
-    web: http://twitter.com/robingeall
+- title: Head of design @ IncepTech Ltd.
+  date: 2015-
+  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro placeat beatae optio voluptatibus mollitia quo, sapiente ut? Aspernatur asperiores eos illum rem explicabo vel iste culpa. Consequuntur animi porro possimus autem, corporis dolor, ipsam delectus exercitationem libero est eos quas laborum odit ducimus et vitae iusto, quibusdam facilis recusandae ex. Placeat libero quos recusandae commodi ipsa corrupti laboriosam esse, nisi quo repudiandae illo possimus expedita. Cum optio accusamus doloremque et reiciendis inventore veniam, maxime quisquam facere provident debitis, qui voluptatum quis fugiat, quibusdam aliquam, consequatur eligendi consectetur rem facilis quas cumque hic nihil dignissimos. Quia atque architecto, placeat velit minima.
+- title: Something else here
+  date: 2008-2016
+  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro placeat beatae optio voluptatibus mollitia quo, sapiente ut? Aspernatur asperiores eos illum rem explicabo vel iste culpa. Consequuntur animi porro possimus autem, corporis dolor, ipsam delectus exercitationem libero est eos quas laborum odit ducimus et vitae iusto, quibusdam facilis recusandae ex. Placeat libero quos recusandae commodi ipsa corrupti laboriosam esse, nisi quo repudiandae illo possimus expedita. Cum optio accusamus doloremque et reiciendis inventore veniam, maxime quisquam facere provident debitis, qui voluptatum quis fugiat, quibusdam aliquam, consequatur eligendi consectetur rem facilis quas cumque hic nihil dignissimos. Quia atque architecto, placeat velit minima.

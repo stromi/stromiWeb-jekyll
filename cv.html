@@ -1,17 +1,30 @@
 ---
 layout: cv_layout
-title: About me
+title: Milestones, CV
 subtitle: consider this as a short CV
-menu-title: about
+menu-title: milestones
 permalink: /about/
-milestones: milestone1
+
 ---
 <section class="cv-content">
 	<div class="container">
 		
+{% for milestone in site.data.milestones %}
+	<div class="row milestone">	  
+	    <div class="col-md-4 title">
 
-
-		<div class="row milestone">
+	    	<span>{{ milestone.date }}</span>
+	    	<h2>{{ milestone.title }}</h2>
+	    	
+	    </div>
+	    <div class="col-md-8 description">
+	    	<div class="data-block light">
+	    		{{ milestone.description }}
+	    	</div>
+	    </div>
+	</div>
+{% endfor %}
+		<!-- <div class="row milestone">
 			<div class="col-md-6">
 				<h2>
 					Head of design @ IncepTech
@@ -23,55 +36,10 @@ milestones: milestone1
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate tempore rerum illum, minus ullam vero accusantium quaerat beatae consectetur quibusdam! Accusamus maiores quod, veniam autem commodi dolore quasi, molestiae ratione. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate tempore rerum illum, minus ullam vero accusantium quaerat beatae consectetur quibusdam! Accusamus maiores quod, veniam autem commodi dolore quasi, molestiae ratione.
 				</div>
 			</div>
-		</div>
-		<div class="row milestone">
-			<div class="col-md-6">
-				<h2>
-					Freelance graphic, web & UI designer 
-				</h2>				
-				<span>2008 - </span>
-			</div>
-			<div class="col-md-6">
-				<div class="data-block dark">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate tempore rerum illum, minus ullam vero accusantium quaerat beatae consectetur quibusdam! Accusamus maiores quod, veniam autem commodi dolore quasi, molestiae ratione.
-				</div>
-			</div>
-		</div>
-		<div class="row milestone">
-			<div class="col-md-6">
-				<h2>
-					something
-				</h2>				
-			</div>
-			<div class="col-md-6">
-				<div class="data-block dark">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate tempore rerum illum, minus ullam vero accusantium quaerat beatae consectetur quibusdam! Accusamus maiores quod, veniam autem commodi dolore quasi, molestiae ratione.
-				</div>
-			</div>
-		</div>
-		<div class="row milestone">
-			<div class="col-md-6">
-				<h2>
-					something
-				</h2>				
-			</div>
-			<div class="col-md-6">
-				<div class="data-block dark">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate tempore rerum illum, minus ullam vero accusantium quaerat beatae consectetur quibusdam! Accusamus maiores quod, veniam autem commodi dolore quasi, molestiae ratione.
-				</div>
-			</div>
-		</div>
-		<div class="row milestone">
-			<div class="col-md-6">
-				<h2>
-					something
-				</h2>				
-			</div>
-			<div class="col-md-6">
-				<div class="data-block dark">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate tempore rerum illum, minus ullam vero accusantium quaerat beatae consectetur quibusdam! Accusamus maiores quod, veniam autem commodi dolore quasi, molestiae ratione.
-				</div>
-			</div>
-		</div>
+		</div> -->
+		
+		
+		
+		
 	</div>
 </section>
