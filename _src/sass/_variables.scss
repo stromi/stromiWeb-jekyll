@@ -1,0 +1,24 @@
+// sizes 
+$height-header: 80px;
+$size-logo-height: $height-header - 20;
+// colors 
+$color-dark: #444444;
+$color-accent: #866bb7;
+$color-bg-light: #fff;
+$color-bg-dark: #222;
+$color-text-light: #fff;
+$color-text-dark: $color-dark;
+
+$cubic: cubic-bezier(0.26, 1.8, 0.17, 0.96);
+// MIXINS
+@mixin box-shadow-light($alpha) {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, $alpha);
+}
+
+@mixin flex-center($valign,$direction) {
+    display: flex;
+    justify-content: $valign;
+    align-items: center;
+    align-content: center;
+    flex-direction: $direction;
+}

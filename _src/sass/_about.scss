@@ -1,0 +1,16 @@
+.cv-content {
+	padding: 3rem 0;
+}
+
+.milestone {
+	@include flex-center(center,center);
+	margin: 6rem 0;
+	h2 {
+		text-align: right;
+	}
+	span {
+		text-align: right;
+		float: left;
+		width: 100%;
+	}
+}

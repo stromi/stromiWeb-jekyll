@@ -1,0 +1,72 @@
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    height: $height-header;
+    line-height: $height-header;
+    transition: transform 0.4s ease-in-out;
+    
+    background: rgba($color-bg-dark,0.95);
+    
+}
+
+.site-logo {
+    float: left;
+    display: inline-block;
+    
+    svg {
+        
+        float: left;
+        display: block;
+        margin: ($height-header - $size-logo-height) / 2;
+        height: $size-logo-height;
+        width: $size-logo-height * 2;
+        transform: translate3d(0,0,0);
+        path {
+            fill: $color-text-light;
+        }
+    }
+}
+
+nav {
+    float: right;
+    display: inline-block;
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            float: left;
+            display: inline-block;
+            a {
+                display: block;
+                float: left;
+                padding: 0 10px;
+                height: $height-header;
+                line-height: $height-header;
+                text-decoration: none;
+                color: $color-text-light;
+                opacity: 0.4;
+                font-size: 1.4rem;
+                transition: opacity 0.2s ease-in-out;
+                position: relative;
+                
+                
+                
+                &:hover,
+                &.active {
+                	text-decoration: none;
+                    opacity: 1;
+                    color: $color-text-light;
+                    &:before, &:after {
+                        height: 12px;
+                    }
+                }
+                &:focus {
+                    color: $color-text-light;
+                }
+            }
+        }
+    }
+}

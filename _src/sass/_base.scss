@@ -1,0 +1,111 @@
+html,
+body {
+    float: left;
+    width: 100%;
+    padding: 0;
+    position: relative;
+    display: block;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background: $color-bg-dark;
+    color: $color-text-light;
+    font-size: 1rem;
+    font-family: 'Dosis', sans-serif;
+}
+
+#site,
+main,
+section {
+    float: left;
+    width: 100%;
+    position: relative;
+    display: block;
+}
+
+main {
+    transition: transform 1.2s $cubic, opacity 0.5s ease-in-out;
+}
+
+#site {
+    &.page-in {
+        main {
+            transition: all 0.6s ease-in-out;
+            opacity: 1;
+            transform: translate3d(0, -50px, 0);
+        }
+    }
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    &:focus,
+    &:hover,
+    &:active {
+        outline: none;
+        text-decoration: none;
+    }
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Georgia';
+    font-style: italic;
+    position: relative;
+    line-height: 1.2em;
+    &.title {
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        &:before {
+            position: absolute;
+            display: block;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 50px;
+            background: #fff;
+            content: '';
+            opacity: 0.5;
+        }
+    }
+}
+
+h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+.data-block {
+    padding: 2rem;
+    background: $color-bg-light;
+    color: $color-text-dark;
+    @include box-shadow-light(0.2);
+    h1,
+    h2,
+    h3 {
+        color: $color-text-dark;
+        &:before {
+            background: $color-text-dark;
+        }
+    }
+    &.dark {
+        background: $color-bg-dark;
+        color: $color-text-light
+    }
+    
+}

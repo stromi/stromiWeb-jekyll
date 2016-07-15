@@ -1,0 +1,25 @@
+// ---
+// # Only the main Sass file needs front matter (the dashes are enough)
+// ---
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import '_bs4/bootstrap';
+@import '_fa/font-awesome';
+@import '_variables'; 
+@import '_loader';
+@import '_animate';
+
+// IMPORT PARTIALS 
+@import '_base';
+@import '_header';
+@import '_footer';
+@import '_buttons';
+@import '_layout';
+@import '_work';
+@import '_about';
+
+#__bs_notify__ {
+	position: fixed;
+	bottom: 0 !important;
+	right: 0 !important;
+	top: auto !important;
+}

@@ -1,0 +1,32 @@
+---
+layout: work_page
+title: Selected work 
+subtitle: some of my recent works
+menu-title: work
+cover-image: stromi-cover.jpg
+permalink: /work/
+---
+
+<section class="section-works page-content bg-light content-dark">
+    <div class="container">
+        <div class="row">
+            {% for work in site.works %}
+            <div class="work-item {{ work.thumb-size }}">
+                <a href="{{ work.permalink | prepend: site.baseurl }}" class="work-thumb-link">
+                    <div class="work-thumb" style="background-image: url('{{ site.baseurl }}/{{ work.image-thumb }}');"></div>
+                </a>
+                <a href="{{ work.permalink | prepend: site.baseurl }}">
+                    <!-- <a class="post-link" href="{{ work.permalink  }}"> -->
+                    <h2>
+                        {{ work.title }}
+                        <i class="fa fa-long-arrow-right"></i>
+                    </h2>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+
