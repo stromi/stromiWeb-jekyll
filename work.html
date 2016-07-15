@@ -1,7 +1,7 @@
 ---
 layout: work_page
-title: Selected work 
-subtitle: some of my recent works
+title: Selected works 
+subtitle: some of my recent works and side projects
 menu-title: work
 cover-image: stromi-cover.jpg
 permalink: /work/
@@ -11,7 +11,7 @@ permalink: /work/
     <div class="container">
         <div class="row">
             {% for work in site.works %}
-            <div class="work-item {{ work.thumb-size }}">
+            <div class="work-item {{ work.thumb-size }} anim">
                 <a href="{{ work.permalink | prepend: site.baseurl }}" class="work-thumb-link">
                     <div class="work-thumb" style="background-image: url('{{ site.baseurl }}/{{ work.image-thumb }}');"></div>
                 </a>

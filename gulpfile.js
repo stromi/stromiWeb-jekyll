@@ -5,6 +5,7 @@ var prefix = require('gulp-autoprefixer');
 var cp = require('child_process');
 var concat = require('gulp-concat');
 var clean = require('gulp-clean');
+var plumber = require('gulp-plumber');
 
 
 var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
@@ -41,20 +42,28 @@ gulp.task('browser-sync', ['sass', 'scripts', 'jekyll-build'], function() {
 });
 
 gulp.task('clean', function() {
-    return gulp.src(['./css', './js'], {read: false})
-            .pipe(clean());
+    return gulp.src(['./css', './js'], { read: false })
+        .pipe(clean());
 });
 
 /**
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
 gulp.task('sass', function() {
-    return gulp.src('_src/sass/main.scss')
+    gulp.src('_src/sass/main.scss')
+
+    .pipe(plumber({
+            errorHandler: function(error) {
+                console.log(error.message);
+                this.emit('end');
+            }
+        }))
         .pipe(sass({
             includePaths: ['sass'],
             onError: browserSync.notify
         }))
-        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+
+    .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('_site/css'))
         .pipe(browserSync.reload({ stream: true }))
         .pipe(gulp.dest('css'));
@@ -70,7 +79,7 @@ gulp.task('scripts', function() {
         .pipe(browserSync.reload({ stream: true }))
         .pipe(gulp.dest('js'));
 
-        
+
 
 });
 

@@ -51,7 +51,14 @@
                     </div>
                     <div class="row">
                         <div class="work-images">
-                            {{ content }}
+                            {% for item in page.images %}
+                                <figure class="work-image anim">
+                                    <img src="{{ site.baseurl }}/img/{{ item.src }}" alt="">
+                                    <figcaption>
+                                        {{ item.caption }}
+                                    </figcaption>
+                                </figure>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
