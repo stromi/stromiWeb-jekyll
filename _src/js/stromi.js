@@ -1,5 +1,21 @@
 (function($) {
 
+    // $(document).ready(function() {
+    //     $("html").niceScroll({
+    //         scrollspeed: 20,
+    //         hwacceleration: true,
+    //         cursoropacitymin: 0.1,
+    //         cursoropacitymax: 0.5,
+    //         cursorcolor: "#866bb7",
+    //         cursorborder: "none",
+    //         cursorborderradius: "0",
+    //         zindex: 8,
+    //         cursorwidth: 6
+
+
+    //     });
+    // });
+
     // FUNCTIONS LIST    
 
 
@@ -84,7 +100,7 @@
                     winPosTop();
                     workScrollDown();
                     reveal()
-                    // ScrollTrigger.init();
+                        // ScrollTrigger.init();
 
 
                 }
@@ -105,7 +121,7 @@
 
         workScrollDown();
         reveal()
-        // ScrollTrigger.init();
+            // ScrollTrigger.init();
 
     });
 

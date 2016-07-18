@@ -1,6 +1,6 @@
 
 .page-header {
-    min-height: 100vh;        
+    height: 720px;
     padding: 8rem 2rem 2rem;
     @include flex-center(flex-end, column);
     background-color: darken($color-dark, 10%);

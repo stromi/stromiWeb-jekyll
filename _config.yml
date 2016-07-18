@@ -9,12 +9,12 @@
 title: gergely strommer / stromi
 email: stromi@stromi.net
 description: > # this means to ignore newlines until "baseurl:"
-  graphic, web & UI designer with a passion for coding (mainly frontend, of coourse) modern web development tools, endless SCSS and JS files, come whatever may...
+  graphic, web & UI designer with a passion for coding (mainly frontend, of coourse) modern web development tools, endless SCSS and JS filechains, come whatever may...
 baseurl: "" # the subpath of your site, e.g. /blog
 
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://stromi.net/" # the base hostname & protocol for your site
+twitter_username: gergelystrommer
+github_username:  stromi
 
 # Build settings
 markdown: kramdown
