@@ -3,10 +3,16 @@
     width: 100%;
     position: relative;
     padding: 6rem 2rem 4rem;
-    background: darken($color-bg-dark, 2%);
+    background: darken($color-bg-light, 10%);
     z-index: 1;
     opacity: 1;
     transition: all 1.2s $cubic;
+    color: $color-text-dark;
+    h2 {
+        &:before {
+            background: rgba($color-text-dark,0.8);
+        }
+    }
     .contacts {
         float: left;
         width: 100%;
@@ -18,33 +24,49 @@
                 float: left;
                 width: 100%;
                 list-style-type: none;
-                margin-bottom: 1rem;
+                margin-bottom: 0.5rem;
+
                 a {
                     float: left;
-                    width: 100%;
+                    // width: 100%;
                     position: relative;
                     display: block;
-                    padding: 0 0 0 1.5rem;
-                    color: $color-text-light;
+                    padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+                    color: $color-text-dark;
                     transition: all 0.3s ease-in-out;
                     cursor: pointer;
                     &:before {
                         position: absolute;
-                        left: 0;
+                        left: 1rem;
                         top: 50%;
                         transform: translate3d(0, -50%, 0);
                         height: 1px;
                         width: 0.6rem;
                         content: '';
                         display: block;
-                        background: #fff;
+                        background: $color-text-dark;
                         transition: all 0.6s $cubic;
                     }
+                    &:after {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        height: 100%;
+                        width: 0;
+                        content: '';
+                        background: $color-accent;
+                        z-index: -1;
+                        transition: all 0.8s $cubic;
+                    }
                     &:hover {
-                        color: $color-accent;
+                        // color: $color-accent;
+                        color: $color-text-light;
                         &:before {
-                            background: $color-accent;
+                            background: $color-text-light;
                             width: 1rem;
+                        }
+                        &:after {
+                            width: 100%;
                         }
                     }
                 }

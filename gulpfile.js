@@ -71,6 +71,8 @@ gulp.task('sass', function() {
 });
 
 
+
+
 gulp.task('scripts', function() {
     return gulp.src(['./_src/js/vendor/*.js', './_src/js/stromi.js'])
         // .pipe(plumber())
@@ -98,3 +100,4 @@ gulp.task('watch', function() {
  * compile the jekyll site, launch BrowserSync & watch files.
  */
 gulp.task('default', ['browser-sync', 'watch', 'clean']);
+gulp.task('prod', ['sass-min', 'scripts-min', 'jekyll-build']);

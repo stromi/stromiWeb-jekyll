@@ -1,4 +1,5 @@
 .section-works {
+    padding: 4rem;
     &:before {
         width: 2px;
         height: 100%;
@@ -212,6 +213,18 @@
         float: left;
         a {
             color: $color-accent;
+            font-weight: bold;
+            i {
+                margin-left: 5px;
+                transition: all 0.5s $cubic;
+
+            }
+            &:hover {
+                i {
+                    transform: translate3d(10px,0,0);
+                }
+
+            }
         }
         @include media-breakpoint-down(sm) {
             margin: 2rem 0;
@@ -299,10 +312,7 @@
             background-repeat: no-repeat;
             z-index: -1;
             opacity: 0.2;
-            // transform: translate3d(-50%, 0, 0);
-
-            // transition: transform 0.8s $cubic, opacity 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
+            transition: opacity 0.3s ease-in-out;
         }
         h4 {
             padding: 1rem;
@@ -334,7 +344,7 @@
             &:hover {
                 .thumb {
                     // transform: scale(1.05) translate3d(-50%, 0, 0);
-                    opacity: 0.5;
+                    opacity: 1;
                 }
                 h4 {
                     &:before {
@@ -353,7 +363,7 @@
             &:hover {
                 .thumb {
                     // transform: scale(1.05) translate3d(-50%, 0, 0);
-                    opacity: 0.5;
+                    opacity: 1;
                 }
                 h4 {
                     &:before {

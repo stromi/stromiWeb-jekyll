@@ -27,13 +27,13 @@
     }
     .title {
         margin-right: -6rem;
-        margin-top: 3rem;
+        margin-top: -3rem;
         z-index: 2;
         position: relative;
         h2 {
             text-align: right;
             color: $color-text-light;
-            padding: 2rem;
+            padding: 1rem;
             background: $color-bg-dark;
             display: block;
             width: 100%;
@@ -70,14 +70,14 @@
                 display: block;
                 padding: 1rem;
                 font-size: 1.4rem;
-                margin: 0 0 0 -1rem;
+                margin: 0 0 0 -2rem;
             }
             span {
                 position: absolute;
                 bottom: -3.5rem;
                 font-size: 1.2rem;
                 padding: 3rem 1rem 0.5rem 1rem;
-                left: -1.5rem;
+                left: -2rem;
             }
         }
         .description {
