@@ -8110,7 +8110,7 @@ nav {
 
 .work-nav .work-nav-item {
   width: 50%;
-  height: 200px;
+  height: 240px;
   display: block;
   text-align: center;
   position: relative;
@@ -8168,6 +8168,9 @@ nav {
       background: #866bb7;
       -webkit-transition: width 0.6s cubic-bezier(0.26, 1.8, 0.17, 0.96);
       transition: width 0.6s cubic-bezier(0.26, 1.8, 0.17, 0.96); }
+    @media (max-width: 767px) {
+      .work-nav .work-nav-item h4 {
+        font-size: 1.2rem; } }
   .work-nav .work-nav-item.prev {
     float: left; }
     .work-nav .work-nav-item.prev h4:before {
@@ -8187,7 +8190,8 @@ nav {
   @media (max-width: 543px) {
     .work-nav .work-nav-item {
       float: left;
-      width: 100%; } }
+      width: 100%;
+      height: 200px; } }
 
 .cv-content {
   padding: 3rem 1rem;
